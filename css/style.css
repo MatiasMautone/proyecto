@@ -1,0 +1,64 @@
+/*Reseteo*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/* FILAS Y COLUMNAS EXPLICITAS */
+/* 1 REM=16px */
+/* .grilla{
+    background-color: #aeaeae;
+    display: grid;
+    width: 500px;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 500px;
+    grid-template-rows: 75% 25%;
+    padding: 1rem;
+} */
+
+/* GRID X AREA */
+
+.grilla{
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 550px;
+    grid-template-areas: 
+    "nav header header header"
+    "nav articulo articulo banana"
+    "nav section section banana"
+    "nav footer footer footer"
+    ;
+}
+
+.grilla nav{
+    background-color: #ffdb7f;
+    grid-area: nav;
+}
+
+.grilla header{
+    background-color: #c5ff7f;
+    grid-area: header;
+}
+.grilla article img{
+    width: 160px;
+}
+.grilla section{
+    background-color: #8aff7f;
+    grid-area: section;
+}
+
+.grilla article{
+    background-color: #7fffcc;
+    grid-area: articulo;
+    display: flex;
+    align-items: center;
+}
+
+.grilla aside{
+    background-color: #7fbdff;
+    grid-area: banana;
+}
+.grilla footer{
+    background-color: #b47fff;
+    grid-area: footer;
+}
